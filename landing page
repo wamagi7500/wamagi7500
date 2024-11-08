@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRE-INSCRIPCION 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4CAF50;
+            color: #333333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section h1 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #4CAF50;
+        }
+        .section p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:disabled {
+            background-color: #ccc;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms["registerForm"]["name"].value;
+            var phone = document.forms["registerForm"]["phone"].value;
+            var email = document.forms["registerForm"]["email"].value;
+            if (name == "" || phone == "" || email == "") {
+                document.getElementById("submitBtn").disabled = true;
+            } else {
+                document.getElementById("submitBtn").disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/CAKimberley.png" alt="Logo">
+            <h1>PRE-INSCRIPCION 2025</h1>
+        </div>
+        <!-- Sección 1: Presentación e Invitación -->
+        <div class="section" id="presentation">
+            <h1>¡Bienvenidos a Nuestro Jardín "El Dragoncito Verde"!</h1>
+            <p>Te invitamos a unirte a nosotros para una experiencia única donde exploraremos todo lo que te interesa.</p>
+            <p><strong>SALAS</strong> 3, 4 Y 5 AÑOS</p>
+            <p><strong>TURNOS</strong> MAÑANA Y TARDE</p>
+            <p><strong></strong> Educación física, Inglés, Música y Natación.</p>
+        </div>
+        
+        <!-- Sección 2: Formulario para Agendar Reuniones -->
+        <div class="section" id="form">
+            <h1>Regístrate para Agendar una Reunión</h1>
+            <form name="registerForm" onkeyup="validateForm()" action="https://example.com/form-submit" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submitBtn" disabled>Enviar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sección 3: Calendario de Google para Agendar Reuniones -->
+        <div class="section" id="calendar">
+            <h1>Agenda una Reunión</h1>
+            <div class="iframe-container">
+                <iframe src="https://calendly.com/wamagi7500/reuniones-preinscripcion" frameborder="0" width="100%" height="600" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
